@@ -1,0 +1,501 @@
+* {
+        box-sizing: border-box;
+}
+body {
+    display: flex;
+    margin: 0;
+    margin-bottom: 5em;
+    padding: 0;
+    background-color: rgb(252, 246, 252) ;
+}
+
+
+h1, h2, h3, p, a {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    filter:blur(0.5px);
+    font-smooth: antialiased;
+}
+
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 1.5em;
+    -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-auto-rows: minmax(25px, 50px);
+    max-width: 60vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: white;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+}
+.wrapper > * {  
+    display: flex;
+}
+.wrapper header {
+    grid-column: span 24;
+    grid-row: span 12;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+}
+.header-ol {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    
+}        .header-ol img:first-child{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+}
+.float {
+position: absolute;
+height: 25%;
+width: 25%;
+align-self: center;
+}
+.header-double {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    flex-direction: column;
+}
+.header-double img {
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+}
+
+main section button {
+    align-self: flex-end;
+}
+
+.header-double img:nth-child(1) {
+background-color: rgb(158, 109, 82);
+}
+.header-double img:nth-child(2) {
+background-color: rgb(10, 132, 110);
+}
+.wrapper nav {
+    grid-column: span 24;
+    grid-row: span 2;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Maven Pro';
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+}
+nav a {
+    text-decoration: none;
+    color:rgb(10, 132, 110);
+    font-size: 2em;
+    font-weight: 600;
+
+}
+.wrapper main {
+    display: flex;
+    grid-column: span 24;
+    grid-row: span 36;
+    flex-direction: column;
+    gap:5vh;
+    
+} 
+.wrapper h1 {
+    align-self: center;
+    color: rgb(10, 132, 110);
+    font-size: 3em;
+    font-family: 'Maven Pro';
+    font-weight: 600;
+}
+main section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5em;
+    flex-shrink: 1;
+    grid-row: span 14;
+    
+}
+
+.workpls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5em;
+    flex-shrink: 1;
+    grid-row: span 14;
+    grid-column: span 24;
+}
+
+.sectiongap {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.greencircle {
+    background-color:#0a856e;
+    border-radius: 100%;
+    display: flex;
+    align-self: center;
+    flex-shrink: 1;
+    width: 30em;
+    height: 30em;
+}
+.greencircle img {
+    width: 100%;
+    height: 100%;
+    padding: 20%;
+}
+line {
+width: 50vh;
+border: 3px solid #055647;
+align-self: center;
+margin: 1em;
+}
+.card img:nth-child(2) {
+    position: absolute;
+    width: 125px;
+    align-self: center;
+    
+}
+.card {
+    height: 450px;
+    width: 300px;
+    box-shadow: 2px 2px 5px black;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+}
+.cardimg {
+    display: flex;
+    width: 100%;
+    height: 75%;
+    justify-content: center;
+    flex: 0 1 auto;
+} 
+.cardimg img{
+    object-fit: cover;
+}
+.cardtext {
+    display: flex;
+    text-align: center;
+}
+.cardtext > * {
+    width: 50%;
+    margin: 0;
+}
+
+.cardhead {
+    width: 100%;
+    flex: 0 1 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    padding: 1vh;
+}
+
+.threelinesmenu {
+    display: none;
+    position: absolute;
+    left: 88%;
+    top: 2%;
+}
+
+.plantbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+#redbutton {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 100%;
+    font-size: 1em;
+    flex-grow: 1;
+}
+#greenbutton {
+    background-color: rgb(10, 132, 110);
+    padding: 0.8em 1.6em;
+    font-size: 1.4em;
+    color: white;
+    width: fit-content;
+}
+
+main p {
+    font-weight: 500;
+}
+
+button {
+font-family: 'Open Sans';
+font-style: normal;
+padding-block: 0;
+cursor: pointer;
+border-radius: 0.5em;
+border: 0;
+flex-shrink: 1;
+text-transform: uppercase;
+font-weight: 700;
+}
+.wrapper footer {
+    grid-column: span 24;
+    grid-row: span 12;
+    background: url("images/handsidan.avif") no-repeat fixed center;
+    background-size: 100%;
+    background-position: 100%;
+    width: 100%;
+    height: 100%;
+}
+.blackfooter {
+    background-color: black;
+    width: 50%;
+    filter: opacity(75%);
+    display: flex;
+    flex: 1 0 auto;
+    text-align: center;
+    flex-direction: column;
+    gap: 5em;
+    justify-content: flex-end;
+}
+.blackfooter h3 {
+    font-size: 4em;
+    align-content: center;
+}
+.blackfooter > * {
+    color: white;
+    filter: opacity(100%);
+}
+.containerthem {
+    display: flex;
+    width:100%;
+    height:100%;
+}
+.details {
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1em;
+    align-items: center;
+}
+.half {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+b {
+    font-size: 1em;
+    text-align: end;
+}
+
+figcaption {
+    font-size: 1em;
+}
+
+.details p:nth-child(1):before { 
+    content: url('images/telephone.svg');
+    position:relative; /*or absolute*/
+    z-index:100000; /*a number that's more than the modal box*/
+    right: 0.2em;
+    top: 0.1em;
+}
+
+.details p:nth-child(2):before { 
+    content: url('images/envelope.svg');
+    position:relative; /*or absolute*/
+    z-index:100000; /*a number that's more than the modal box*/
+    right: 0.2em;
+    top: 0.3em;
+}
+
+.garbagered {
+    filter: invert(29%) sepia(86%) saturate(7455%) hue-rotate(355deg) brightness(95%) contrast(124%);
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+
+.garbagered img {
+    height: 40px;
+}
+
+.wrapper .nav {
+    grid-column: span 24;
+    grid-row: span 2;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Maven Pro';
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+}
+.nav a {
+    text-decoration: none;
+    color:rgb(10, 132, 110);
+    font-size: 2em;
+    font-weight: 600;
+
+}
+
+@media only screen and (max-width: 720px) {
+    body {
+        margin-bottom: 0;
+    }
+    .wrapper {
+        max-width: 100vw;
+    }
+    .float {
+        height: 50%;
+        width: 50%;
+    }
+    .wrapper header {
+        flex-direction: column;
+    }
+    .wrapper nav {
+        display: none;
+    }
+    .header-ol {
+        width: 100%;
+        height: 100%;
+    }
+    .header-double {
+        width: 100%;
+        flex-direction: row;
+    }
+    .wrapper main {
+        grid-row: 19 / 74;
+    }
+    h2 {
+        font-size: 2em
+    }
+    .sectiongap {
+        width: 100%;
+        text-align: center;
+        gap: 2em;
+    }
+
+    .cardhead{
+        justify-content:start;
+    }
+
+    .wrapper section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrapper main article {
+        flex-wrap: wrap;
+    }
+    main section {
+        gap: 2vh;
+    }
+    main section button {
+        align-self: center;
+    }
+    .sectiongap #greenbutton {
+
+    }
+
+    .sectiongap {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        height: 450px;
+        width: 300px;
+    }
+
+    .workpls {
+        gap: 5em;
+        flex-shrink: 1;
+        grid-row: span 20;
+        grid-column: span 24;
+        margin: 3em;
+        flex-direction: column ;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .card img:nth-child(2) {
+        position: absolute;
+        width: 125px;
+        align-self: center;
+}
+
+#redbutton {
+    display: none;
+}
+
+.garbagered {
+    display: inline-block;
+}
+
+main p {
+    width: 75%;
+    font-size: 2em;
+}
+
+.sectiongap h1 {
+    padding: 0;
+}
+
+.threelinesmenu {
+    display: block;
+}
+
+.wrapper footer {
+    grid-row: span 24;
+}
+
+.containerthem {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.blackfooter {
+    width: 100%;
+    height: 50%;
+}
+
+.details p:nth-child(2)::before {
+    display: none;
+}
+
+.details p:nth-child(2)::after {
+    content: url('images/envelope.svg');
+    position:relative; /*or absolute*/
+    z-index:100000; /*a number that's more than the modal box*/
+    right: 0.2em;
+    top: 0.25em;
+    margin-left: 0.5em;
+}
+
+}
