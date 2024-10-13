@@ -1,5 +1,5 @@
 * {
-        box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
     display: flex;
@@ -9,6 +9,18 @@ body {
     background-color: rgb(252, 246, 252) ;
 }
 
+article {
+    display: flex;
+}
+
+
+figure {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    unicode-bidi: isolate;
+}
 
 h1, h2, h3, p, a {
     text-rendering: optimizeLegibility !important;
@@ -37,7 +49,23 @@ p {
     flex-grow: 0;
     flex-basis: 100%;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    
+
+    nav {
+        grid-column: span 24;
+        grid-row: span 2;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Maven Pro';
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+
+    }
+    nav a {
+        text-decoration: none;
+        color:rgb(10, 132, 110);
+        font-size: 2em;
+        font-weight: 600;
+        
+    } 
 }
 .wrapper > * {  
     display: flex;
@@ -57,26 +85,27 @@ p {
     justify-content: center;
     
 }        .header-ol img:first-child{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .float {
-position: absolute;
-height: 25%;
-width: 25%;
-align-self: center;
+    position: absolute;
+    height: 25%;
+    width: 25%;
+    align-self: center;
 }
 .header-double {
     display: flex;
     width: 50%;
     height: 50%;
     flex-direction: column;
-}
-.header-double img {
-    width: 100%;
-    height: 100%;
-    padding: 2em;
+
+    img {
+        width: 100%;
+        height: 100%;
+        padding: 2em;
+    }
 }
 
 main section button {
@@ -84,10 +113,10 @@ main section button {
 }
 
 .header-double img:nth-child(1) {
-background-color: rgb(158, 109, 82);
+    background-color: rgb(158, 109, 82);
 }
 .header-double img:nth-child(2) {
-background-color: rgb(10, 132, 110);
+    background-color: rgb(10, 132, 110);
 }
 .wrapper nav {
     grid-column: span 24;
@@ -102,7 +131,7 @@ nav a {
     color:rgb(10, 132, 110);
     font-size: 2em;
     font-weight: 600;
-
+    
 }
 .wrapper main {
     display: flex;
@@ -119,17 +148,15 @@ nav a {
     font-family: 'Maven Pro';
     font-weight: 600;
 }
-main section {
+.topmain {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 5em;
     flex-shrink: 1;
     grid-row: span 14;
-    
 }
-
-.workpls {
+.secondpiece {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -138,7 +165,6 @@ main section {
     grid-row: span 14;
     grid-column: span 24;
 }
-
 .sectiongap {
     display: flex;
     width: 40%;
@@ -154,8 +180,8 @@ main section {
     display: flex;
     align-self: center;
     flex-shrink: 1;
-    width: 30em;
-    height: 30em;
+    width: clamp(20em, 25em, 30em);
+    height: clamp(20em, 25em, 30em);
 }
 .greencircle img {
     width: 100%;
@@ -163,16 +189,15 @@ main section {
     padding: 20%;
 }
 line {
-width: 50vh;
-border: 3px solid #055647;
-align-self: center;
-margin: 1em;
+    width: 50vh;
+    border: 3px solid #055647;
+    align-self: center;
+    margin: 1em;
 }
 .card img:nth-child(2) {
     position: absolute;
     width: 125px;
     align-self: center;
-    
 }
 .card {
     height: 450px;
@@ -200,18 +225,17 @@ margin: 1em;
     width: 50%;
     margin: 0;
 }
-
-.cardhead {
-    width: 100%;
-    flex: 0 1 auto;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    gap: 2vh;
-    padding: 1vh;
-}
+.captionseperator {
+        width: 100%;
+        flex: 0 1 auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+        padding: 1vh;
+    }
 
 .threelinesmenu {
     display: none;
@@ -219,7 +243,6 @@ margin: 1em;
     left: 88%;
     top: 2%;
 }
-
 .plantbox {
     display: flex;
     flex-wrap: wrap;
@@ -241,31 +264,21 @@ margin: 1em;
     color: white;
     width: fit-content;
 }
-
 main p {
     font-weight: 500;
 }
-
 button {
-font-family: 'Open Sans';
-font-style: normal;
-padding-block: 0;
-cursor: pointer;
-border-radius: 0.5em;
-border: 0;
-flex-shrink: 1;
-text-transform: uppercase;
-font-weight: 700;
+    font-family: 'Open Sans';
+    font-style: normal;
+    padding-block: 0;
+    cursor: pointer;
+    border-radius: 0.5em;
+    border: 0;
+    flex-shrink: 1;
+    text-transform: uppercase;
+    font-weight: 700;
 }
-.wrapper footer {
-    grid-column: span 24;
-    grid-row: span 12;
-    background: url("images/handsidan.avif") no-repeat fixed center;
-    background-size: 100%;
-    background-position: 100%;
-    width: 100%;
-    height: 100%;
-}
+
 .blackfooter {
     background-color: black;
     width: 50%;
@@ -304,23 +317,19 @@ font-weight: 700;
     display: flex;
     justify-content: center;
 }
-
 h2 {
     margin-block-start: 0;
     margin-block-end: 0;
     font-size: 1.5vw;
     font-weight: 500;
 }
-
 b {
     font-size: 1em;
     text-align: end;
 }
-
-figcaption {
+p {
     font-size: 1em;
 }
-
 .details p:nth-child(1):before { 
     content: url('images/telephone.svg');
     position:relative; /*or absolute*/
@@ -328,7 +337,6 @@ figcaption {
     right: 0.2em;
     top: 0.1em;
 }
-
 .details p:nth-child(2):before { 
     content: url('images/envelope.svg');
     position:relative; /*or absolute*/
@@ -336,18 +344,15 @@ figcaption {
     right: 0.2em;
     top: 0.3em;
 }
-
 .garbagered {
     filter: invert(29%) sepia(86%) saturate(7455%) hue-rotate(355deg) brightness(95%) contrast(124%);
     display: none;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
-
 .garbagered img {
-    height: 40px;
+    height: 30px;
 }
-
 .wrapper .nav {
     grid-column: span 24;
     grid-row: span 2;
@@ -361,8 +366,19 @@ figcaption {
     color:rgb(10, 132, 110);
     font-size: 2em;
     font-weight: 600;
-
 }
+
+.firstfooter {
+    grid-column: span 24;
+    grid-row: span 12;
+    background: url("images/handsidan.avif") no-repeat fixed center;
+    background-size: 100%;
+    background-position: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 @media only screen and (max-width: 720px) {
     body {
@@ -400,13 +416,16 @@ figcaption {
         text-align: center;
         gap: 2em;
     }
-
-    .cardhead{
+    
+    .captionseperator{
         justify-content:start;
     }
 
+    .cardimg {
+        height: 65%;
+    }
+    
     .wrapper section {
-        flex-direction: column;
         align-items: center;
     }
     .wrapper main article {
@@ -418,21 +437,14 @@ figcaption {
     main section button {
         align-self: center;
     }
-    .sectiongap #greenbutton {
-
-    }
-
+    
     .sectiongap {
         justify-content: center;
         align-items: center;
     }
 
-    .card {
-        height: 450px;
-        width: 300px;
-    }
-
-    .workpls {
+    
+    .secondpiece {
         gap: 5em;
         flex-shrink: 1;
         grid-row: span 20;
@@ -442,60 +454,70 @@ figcaption {
         align-content: center;
         justify-content: center;
         align-items: center;
-
+        
     }
     .card img:nth-child(2) {
         position: absolute;
         width: 125px;
         align-self: center;
-}
+    }
+    
+    #redbutton {
+        display: none;
+    }
+    
+    .garbagered {
+        display: inline-block;
+    }
+    
+    main p {
+        width: 75%;
+        font-size: 2em;
+    }
 
-#redbutton {
-    display: none;
-}
+    .card p {
+        font-size: 1.5em;
+    }
+    
+    .sectiongap h1 {
+        padding: 0;
+    }
+    
+    .threelinesmenu {
+        display: block;
+    }
+    
+    .firstfooter {
+        grid-row: span 24;
+    }
+    
+    .containerthem {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .blackfooter {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .details p:nth-child(2)::before {
+        display: none;
+    }
 
-.garbagered {
-    display: inline-block;
-}
+    .topmain {
 
-main p {
-    width: 75%;
-    font-size: 2em;
-}
-
-.sectiongap h1 {
-    padding: 0;
-}
-
-.threelinesmenu {
-    display: block;
-}
-
-.wrapper footer {
-    grid-row: span 24;
-}
-
-.containerthem {
-    flex-direction: column-reverse;
-    align-items: center;
-}
-
-.blackfooter {
-    width: 100%;
-    height: 50%;
-}
-
-.details p:nth-child(2)::before {
-    display: none;
-}
-
-.details p:nth-child(2)::after {
-    content: url('images/envelope.svg');
-    position:relative; /*or absolute*/
-    z-index:100000; /*a number that's more than the modal box*/
-    right: 0.2em;
-    top: 0.25em;
-    margin-left: 0.5em;
-}
-
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .details p:nth-child(2)::after {
+        content: url('images/envelope.svg');
+        position:relative; /*or absolute*/
+        z-index:100000; /*a number that's more than the modal box*/
+        right: 0.2em;
+        top: 0.25em;
+        margin-left: 0.5em;
+    }
+    
 }
